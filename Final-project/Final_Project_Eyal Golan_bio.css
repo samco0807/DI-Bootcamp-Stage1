@@ -128,8 +128,9 @@ span a{
 
 .big-box{
     display: flex;
+    justify-content: space-between;
     background-color: #a1d0d0;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* DISCOGRAPHY */
@@ -144,6 +145,7 @@ span a{
 .albums{
 display: flex;
 justify-content: center;
+flex-wrap: wrap;
 }
 
 .general-box-left{
@@ -262,6 +264,23 @@ align-items: center;
     font-size: large;
 }
 
+/* NEWSLETTER */
+
+.newsletter{
+    display: grid;
+    margin-bottom: 50px;
+}
+
+.newsletter-container{
+    display: grid;
+    justify-items: center;
+}
+
+input#submit{
+    margin: 10px;
+    
+}
+
 /* LINK */
 
 .social{
@@ -300,3 +319,59 @@ footer p{
     color: aliceblue;
     font-size: 15px;
 }
+
+
+/* @media screen and (max-width: 800px) { */
+
+    /* .discography{
+        padding-bottom: 50px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .general-box-left{
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 200px;
+    }
+    
+    .general-box-right{
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 200px;
+    }
+
+    .discography-box{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        border-style: dashed;
+        border-radius: 20px;
+        background-color: antiquewhite;
+        width: 200px;
+        height: 90px;
+        margin: 5px 10px;
+    }
+    
+    .discography-box img{
+        width: 15%;
+        margin: 15px;
+        border-style:groove;
+        border-radius: 100%;
+    }
+
+    .songs{
+        display: flex;
+        /* margin: 10%; */
+        width: 20%;
+        text-align: left;
+        flex-direction: column;
+        align-items: center;
+        font-size: small;
+    }
+} */
