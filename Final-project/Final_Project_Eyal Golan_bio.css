@@ -9,11 +9,10 @@ body{
 
 /* NAV BAR */
 
-.menu{
-    /* padding: 0; */
+nav{
     display: flex;
     margin: 0;
-    padding: 0 30%;
+    padding: 0;
     text-align: center;
     text-decoration: none;
     list-style: none;
@@ -21,29 +20,35 @@ body{
     justify-content: center;
     height: 5vh;
     align-items: center;
-}
-
-.menu a{
-    text-decoration: none;
-    color: aliceblue;
-    font-size: larger;
-    padding: 5px 20px;
+    font-size: calc(0.5rem + 1.5vw);
     
 }
 
-.menu li{
+nav ul{
     /* width: 50%; */
     /* height: 50%; */
-    font-family: "Kaushan Script", cursive;
-    font-weight: bold; 
-    
+    display: flex;
+    justify-content: space-between;
+    width: 50%;    
+    list-style: none;
 }
 
-.menu li :hover{
+nav a{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 5px 20px;
+    font-weight: bold;
+    font-family: "Kaushan Script", cursive;
+}
+
+
+
+nav li:hover{
     transition: 0.2s;
     font-size: 25px;
     color: rgb(24, 110, 118);
     background-color: antiquewhite;
+    
 }
 
 h2{
@@ -53,14 +58,20 @@ h2{
     padding-bottom: 50px;
 }
 
+#icons{
+    cursor: pointer;
+    display: none;
+
+}
+
 /* ACCUEIL */
 
 .banner{
-    height: 400px;
+    height: 1200px;
     display: flex;
     justify-content: left;
     background-size: cover;
-    background-image: url('https://lh3.googleusercontent.com/KAhhnrQQ78MtBWThKhF-3jBjBzAApasY2527JOSSGaCyDQlaJp6FbTCN6enMhnJny97o09kdef9weA=w2880-h1200-p-l90-rj');
+    background-image: url('https://scontent.fcdg4-1.fna.fbcdn.net/v/t39.30808-6/336258666_484474737113339_7064161836794754993_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=BGEXespTLLUAX-ARl7c&_nc_ht=scontent.fcdg4-1.fna&oh=00_AfA2eioIskS6l0YuG-o-tIjiH3Q_8_3E69l-Nfl6MhgKqA&oe=655AB397');
     background-position: center;
     background-clip: text;
 }
@@ -72,7 +83,7 @@ h2{
 }
 
 .banner-title h1{
-    font-size: 2em;
+    font-size: 4em;
     margin-left: 10%;
     margin-top: 40px;
     margin-bottom: 10px;
@@ -124,51 +135,29 @@ span a{
     font-size: 20px;
 }
 
-/* BIG BOX */
-
-.big-box{
-    display: flex;
-    justify-content: space-between;
-    background-color: #a1d0d0;
-    flex-wrap: wrap;
-}
-
 /* DISCOGRAPHY */
 
 .discography{
     padding-bottom: 50px;
-    width: 50%;
+    
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .albums{
 display: flex;
 justify-content: center;
 flex-wrap: wrap;
-}
-
-.general-box-left{
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 200px
-}
-
-.general-box-right{
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 200px;
+align-items: center;
 }
 
 .discography-box{
     display: flex;
     align-items: center;
     justify-content: left;
-    border-style: dashed;
+    border-style: outset;
+    border-color: black;
     border-radius: 20px;
     background-color: antiquewhite;
     width: 400px;
@@ -192,32 +181,58 @@ ul.text{
 
 .songs{
     display: flex;
-    /* margin: 10%; */
-    width: 20%;
+    width: 100%;
     text-align: left;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .songs-container{
 display: flex;
-flex-direction: column;
+flex-wrap: wrap;
 align-items: center;
+width: 100%;
+justify-content: center;
 }
 
-.songs-container a{
+.song{
     display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    margin: 10px;
+    justify-content: space-evenly;
+
+}
+
+.songs a{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    width: 70%;
+    height: 100%;
     font-family: 'Noto Serif Hebrew', serif;
-    font-size: large;
-    padding-bottom: 30%;
-    
+    justify-content: space-around;
+    font-size: 30px;
+    text-decoration: none;
+
+}
+
+.songs img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.song :hover{
+    transform: scale(1.05);
+    transition: 0.2s;
 }
 
 /* AWARDS */
 
 .awards{
-    height: 600px;
-    padding-bottom: 50px;
+    height: 700px;
     background-color: antiquewhite;
 }
 
@@ -226,10 +241,13 @@ align-items: center;
     justify-content: space-evenly;
     align-items: center;
     height: 600px;
+    background-color: antiquewhite;
+    
 }
 
 .prices{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     height: 600px;
@@ -237,13 +255,14 @@ align-items: center;
 
 .awards-box{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     border-radius: 4%;
     background-color:#94b8b8;
     margin: 5px 40px;
     color: antiquewhite;
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 14%; 
     height: 450px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.323);
@@ -252,8 +271,8 @@ align-items: center;
 
 .awards img{
     display: flex;
-    width: 150px;
-    height: 150px;
+    flex-wrap: wrap;
+    width: 80%;
     margin: 20px 20px;
     border-radius: 100%;
 }
@@ -269,6 +288,7 @@ align-items: center;
 .newsletter{
     display: grid;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .newsletter-container{
@@ -320,42 +340,12 @@ footer p{
     font-size: 15px;
 }
 
+@media screen and (max-width: 800px) {
 
-/* @media screen and (max-width: 800px) { */
-
-    /* .discography{
-        padding-bottom: 50px;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .general-box-left{
-        display: flex;
-        justify-content: left;
-        flex-direction: column;
-        align-items: flex-end;
-        width: 200px;
-    }
-    
-    .general-box-right{
-        display: flex;
-        justify-content: left;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 200px;
-    }
-
-    .discography-box{
-        display: flex;
-        align-items: center;
-        justify-content: left;
-        border-style: dashed;
-        border-radius: 20px;
-        background-color: antiquewhite;
-        width: 200px;
-        height: 90px;
-        margin: 5px 10px;
+        .albums boxes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     }
     
     .discography-box img{
@@ -364,14 +354,35 @@ footer p{
         border-style:groove;
         border-radius: 100%;
     }
+}
 
-    .songs{
-        display: flex;
-        /* margin: 10%; */
-        width: 20%;
-        text-align: left;
-        flex-direction: column;
-        align-items: center;
-        font-size: small;
-    }
-} */
+@media (max-width: 900px){
+   #icons {
+    display: block;
+    
+   }
+   #icons:before{
+    content: "\2630";
+   }
+
+
+nav ul{
+    position: fixed;
+    left:-100%;
+    top:5%;
+    flex-direction: column;  
+    background-color: #538585;
+    width: 100%;
+    text-align: center;
+    transition: 0.25s;
+}
+
+nav li{
+    padding: 3px 0;
+
+}
+
+nav li:hover{
+    background-color: skyblue;
+}
+}
