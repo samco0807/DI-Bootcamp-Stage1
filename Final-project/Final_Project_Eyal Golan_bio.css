@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Kaushan+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&family=Noto+Serif+Hebrew:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Merriweather+Sans:wght@300;500&family=Noto+Serif+Hebrew:wght@400;800&family=Paytone+One&family=Rowdies:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;500&family=Noto+Serif+Hebrew:wght@400;800&display=swap');
 
 body{
     margin: 0;
-    font-family: "Exo 2", sans-serif;
+    padding: 0;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Noto Serif Hebrew', serif;
 }
 
 /* NAV BAR */
@@ -17,7 +19,7 @@ nav{
     text-decoration: none;
     list-style: none;
     background-color: #538585;
-    justify-content: center;
+    justify-content: space-between;
     height: 5vh;
     align-items: center;
     font-size: calc(0.5rem + 1.5vw);
@@ -25,20 +27,24 @@ nav{
 }
 
 nav ul{
-    /* width: 50%; */
-    /* height: 50%; */
+    height: 50%;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
-    width: 50%;    
+    justify-content: center;
+    width: 100%;    
     list-style: none;
+    align-items: center;
 }
 
 nav a{
     text-decoration: none;
     color: aliceblue;
-    padding: 5px 20px;
+    padding: 0 20px;
     font-weight: bold;
-    font-family: "Kaushan Script", cursive;
+    font-family: 'Noto Serif Hebrew', serif;
+    font-family: 'Rowdies', sans-serif;
+    text-align: center;
+
 }
 
 
@@ -87,7 +93,12 @@ h2{
     margin-left: 10%;
     margin-top: 40px;
     margin-bottom: 10px;
-    font-family: "Kaushan Script", cursive;
+    font-family: 'Archivo Black', sans-serif;
+font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Noto Serif Hebrew', serif;
+font-family: 'Paytone One', sans-serif;
+font-family: 'Rowdies', sans-serif;
+
 }
 
 .banner-title h3{
@@ -357,24 +368,33 @@ footer p{
 }
 
 @media (max-width: 900px){
+
+
    #icons {
     display: block;
+    margin-left: 90%;
+    position:fixed
     
    }
    #icons:before{
     content: "\2630";
    }
 
+   .active:before{
+    content: "\2715";
+    padding-left: 10px;
+   }
 
 nav ul{
     position: fixed;
-    left:-100%;
+    left:-200%;
     top:5%;
     flex-direction: column;  
     background-color: #538585;
     width: 100%;
     text-align: center;
     transition: 0.25s;
+    margin: 0;
 }
 
 nav li{
@@ -384,5 +404,9 @@ nav li{
 
 nav li:hover{
     background-color: skyblue;
+}
+
+nav.active ul {
+    left:0;
 }
 }
